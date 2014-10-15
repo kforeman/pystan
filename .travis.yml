@@ -5,9 +5,7 @@ os:
   - osx
 compiler:
   - clang
-  - gcc
 env:
-  - TRAVIS_PYTHON_VERSION=3.4 TEST_SUITE_REGEX='^test_rstan'
-  - TRAVIS_PYTHON_VERSION=3.4 TEST_SUITE_REGEX='^(?!test_rstan).*'
+  - TRAVIS_PYTHON_VERSION=3.4 TEST_SUITE_REGEX='^test_basic_array'
 install: source continuous_integration/install.sh
 script: bash continuous_integration/test_script.sh
