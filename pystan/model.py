@@ -282,7 +282,7 @@ class StanModel:
             s = template.safe_substitute(model_cppname=self.model_cppname)
             outfile.write(s)
 
-        extra_compile_args = ['-O3', '-ftemplate-depth-256']
+        extra_compile_args = ['-O3', '-ftemplate-depth-256', '-osx-version-min=10.6']
         distutils.log.set_verbosity(verbose)
         extension = Extension(name=module_name,
                               language="c++",

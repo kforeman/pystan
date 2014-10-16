@@ -111,7 +111,7 @@ libstan_sources = [
     "pystan/stan/src/stan/agrad/rev/var_stack.cpp",
 ]
 
-libstan_extra_compile_args = ['-O3', '-ftemplate-depth-256']
+libstan_extra_compile_args = ['-O3', '-ftemplate-depth-256', '-osx-version-min=10.6']
 
 libstan = ('stan', {'sources': libstan_sources,
                     'include_dirs': stan_include_dirs,
@@ -119,7 +119,7 @@ libstan = ('stan', {'sources': libstan_sources,
                     'macros': stan_macros})
 
 ## extensions
-extensions_extra_compile_args = ['-O0', '-ftemplate-depth-256']
+extensions_extra_compile_args = ['-O0', '-ftemplate-depth-256', '-osx-version-min=10.6']
 
 stanc_sources = [
     "pystan/stan/src/stan/gm/ast_def.cpp",
